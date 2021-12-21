@@ -1,4 +1,4 @@
-# # Create a new DMS replication instance
+# Create a new DMS replication instance
 resource "aws_dms_replication_instance" "default" {
   allocated_storage            = var.allocated_storage
   apply_immediately            = true
@@ -19,13 +19,13 @@ resource "aws_dms_replication_instance" "default" {
 }
 
 # Create a subnet group using existing VPC subnets
-# resource "aws_dms_replication_subnet_group" "dms" {
-#   replication_subnet_group_description = "DMS replication subnet group"
-#   replication_subnet_group_id          = "dms-replication-subnet-group"
-#   replication_subnet_ids               = var.replication_subnet_ids
+resource "aws_dms_replication_subnet_group" "dms" {
+  replication_subnet_group_description = "DMS replication subnet group"
+  replication_subnet_group_id          = var.replication_subnet_group_id
+  subnet_ids                           = var.subnet_ids
 
-# #   tags = {
-# #   }
-# }
+#   tags = {
+#   }
+}
 
 

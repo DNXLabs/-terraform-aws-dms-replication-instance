@@ -10,7 +10,11 @@ variable "availability_zone" {
   description = "The EC2 Availability Zone that the replication instance will be created in"
 }
 
-variable "replication_subnet_ids" {
+variable "replication_subnet_group_id" {
+  description = "The name for the replication subnet group. This value is stored as a lowercase string"
+}
+
+variable "subnet_ids" {
   description = "A list of the EC2 subnet IDs for the subnet group"
 }
 

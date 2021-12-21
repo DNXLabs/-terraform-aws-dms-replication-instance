@@ -27,7 +27,8 @@
 | preferred\_maintenance\_window | The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC) | `any` | n/a | yes |
 | replication\_instance\_class | The compute and memory capacity of the replication instance as specified by the replication instance class | `string` | `"t3.micro"` | no |
 | replication\_instance\_id | The replication instance identifier | `any` | n/a | yes |
-| replication\_subnet\_ids | A list of the EC2 subnet IDs for the subnet group | `any` | n/a | yes |
+| replication\_subnet\_group\_id | The name for the replication subnet group. This value is stored as a lowercase string | `any` | n/a | yes |
+| subnet\_ids | A list of the EC2 subnet IDs for the subnet group | `any` | n/a | yes |
 | vpc\_security\_group\_ids | A list of VPC security group IDs to be used with the replication instance | `any` | n/a | yes |
 
 ## Outputs

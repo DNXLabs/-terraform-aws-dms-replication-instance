@@ -10,7 +10,7 @@ resource "aws_dms_replication_instance" "default" {
   publicly_accessible          = false
   replication_instance_class   = var.replication_instance_class
   replication_instance_id      = var.replication_instance_id 
-  replication_subnet_group_id  = aws_dms_replication_subnet_group.dms.id
+  replication_subnet_group_id  = var.replication_subnet_group_id
   vpc_security_group_ids       = var.vpc_security_group_ids
 
 #   tags = {

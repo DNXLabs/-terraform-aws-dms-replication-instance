@@ -17,3 +17,18 @@ variable "replication_subnet_ids" {
 variable "vpc_security_group_ids" {
   description = "A list of VPC security group IDs to be used with the replication instance"
 }
+
+variable "allocated_storage" {
+  description = "The amount of storage (in gigabytes) to be initially allocated for the replication instance"
+  type        = number
+  default     = 50
+}
+
+variable "engine_version" {
+  description = "The engine version number of the replication instance"
+}
+
+variable "replication_instance_class" {
+  description = "The compute and memory capacity of the replication instance as specified by the replication instance class"
+  default     = "t3.micro"
+}

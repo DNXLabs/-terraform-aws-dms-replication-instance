@@ -1,3 +1,7 @@
+variable "vpc_id" {
+  description = "VPC used by the replication instance"
+}
+
 variable "replication_instance_id" {
   description = "The replication instance identifier"
 }
@@ -20,6 +24,7 @@ variable "subnet_ids" {
 
 variable "vpc_security_group_ids" {
   description = "A list of VPC security group IDs to be used with the replication instance"
+  default = ""
 }
 
 variable "allocated_storage" {
@@ -35,4 +40,16 @@ variable "engine_version" {
 variable "replication_instance_class" {
   description = "The compute and memory capacity of the replication instance as specified by the replication instance class"
   default     = "t3.micro"
+}
+
+variable "create_redshift_role" {
+  description = "Create dms-access-for-endpoint default role for Redshift"
+  default     = true
+  type        = bool
+}
+
+variable "create_logging_role" {
+  description = "Create dms-cloudwatch-logs-role default role for CloudWatch"
+  default     = true
+  type        = bool
 }
